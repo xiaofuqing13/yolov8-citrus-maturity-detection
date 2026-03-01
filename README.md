@@ -5,7 +5,7 @@
 ## 痛点与目的
 
 - **问题**：柑橘采摘季节，工人需要逐个判断果实成熟度，劳动强度大且容易出错，未成熟的果实被误摘直接导致经济损失
-- **方案**：训练 YOLOv8 目标检测模型，对柑橘自动分为三个等级青果（green orange）、半熟（half-green orange）、成熟（orange），辅助决策哪些该摘、哪些该留
+- **方案**：训练 YOLOv8 目标检测模型，对柑橘自动分为三个等级——青果（green orange）、半熟（half-green orange）、成熟（orange），辅助决策哪些该摘、哪些该留
 - **应用**：配合机械臂或分拣流水线，可实现自动化采摘/分级
 
 ## 检测类别
@@ -20,23 +20,23 @@
 
 ### 环境准备
 
-`ash
+```bash
 pip install ultralytics
-`
+```
 
 ### 训练模型
 
-`ash
+```bash
 python train.py
-`
+```
 
-默认使用 YOLOv8n（nano 轻量版），训练 1000 个 epoch，batch size 40，输入尺寸 640640。可根据实际 GPU 显存调整参数。
+默认使用 YOLOv8n（nano 轻量版），训练 1000 个 epoch，batch size 40，输入尺寸 640×640。可根据实际 GPU 显存调整参数。
 
 ### 实时检测
 
-`ash
+```bash
 python test1.py
-`
+```
 
 调用摄像头进行实时柑橘成熟度检测。
 
@@ -44,18 +44,18 @@ python test1.py
 
 数据集按 YOLO 标准格式组织，来源于 Roboflow，已划分为训练集/验证集/测试集：
 
-`
+```
 Original dataset/
- train/
-    images/    # 训练图片
-    labels/    # YOLO 格式标注
- valid/
-    images/
-    labels/
- test/
-     images/
-     labels/
-`
+├── train/
+│   ├── images/    # 训练图片
+│   └── labels/    # YOLO 格式标注
+├── valid/
+│   ├── images/
+│   └── labels/
+└── test/
+    ├── images/
+    └── labels/
+```
 
 ## 训练结果
 
@@ -63,14 +63,14 @@ Original dataset/
 
 ## 项目结构
 
-`
+```
 .
- train.py              # 训练脚本
- test1.py              # 摄像头实时检测
- yolov8n.pt            # YOLOv8 预训练权重
- Original dataset/     # 数据集（需自行准备）
- runs/                 # 训练输出
-`
+├── train.py              # 训练脚本
+├── test1.py              # 摄像头实时检测
+├── yolov8n.pt            # YOLOv8 预训练权重
+├── Original dataset/     # 数据集（需自行准备）
+└── runs/                 # 训练输出
+```
 
 ## 技术栈
 
