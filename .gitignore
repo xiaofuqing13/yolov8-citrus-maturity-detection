@@ -1,0 +1,30 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# PyTorch
+*.pt
+*.pth
+*.onnx
+
+# Data
+Original dataset/
+runs/
+
+# Archives
+*.zip
+*.7z
+*.rar
+
+# Docs
+*.docx
+
+# macOS
+.DS_Store
+._*
+
+# IDE
+.idea/
+.vscode/
