@@ -1,5 +1,8 @@
 # 基于 YOLOv8 的柑橘成熟度检测
 
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-blue) ![License](https://img.shields.io/badge/License-MIT-green)
+
+
 传统果园采摘主要靠人工肉眼判断柑橘生熟程度，效率低、主观性强，尤其在大规模果园场景下难以保证采摘质量的一致性。本项目用 YOLOv8 训练了一个柑橘成熟度检测模型，通过摄像头或图片自动识别柑橘的三种成熟状态，为智能采摘和分拣提供视觉判断依据。
 
 ## 痛点与目的
