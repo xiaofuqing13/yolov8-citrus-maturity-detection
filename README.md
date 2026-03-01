@@ -63,6 +63,10 @@ Original dataset/
 
 ![柑橘检测样本](images/citrus_sample.jpg)
 
+### 检测效果
+
+![检测结果](images/detection_result.png)
+
 训练过程中生成的混淆矩阵、损失曲线等保存在 `runs/detect/` 目录下。
 
 ## 项目结构
